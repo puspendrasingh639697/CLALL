@@ -13,7 +13,7 @@ const server = http.createServer(app);
 const io = new Server(server, { cors: { origin: "*" } });
 
 // Database Connection (Live aur Local dono ke liye)
-const mongoURI = process.env.MONGO_URI || "mongodb://localhost:27017/callApp";
+const mongoURI = process.env.MONGO_URI || "mongodb+srv://pushpendrasinghaniya000a1_db_user:pushpendrasinghaniya000a1_db_user@cluster0.pneliv3.mongodb.net/Coll";
 mongoose.connect(mongoURI)
   .then(() => console.log("✅ MongoDB Connected"))
   .catch(err => console.error("❌ DB Error:", err));
